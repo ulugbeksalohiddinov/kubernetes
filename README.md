@@ -8,4 +8,4 @@
 
 **NODE haqida to'liq ko'rish**
 
-    kubectl get pods -o wide
+    kubectl get nodes -o wide
