@@ -4,4 +4,4 @@
 
 **POD qaysi NODEda turganini ko'rish**
 
-   kubectl get pods -o wide
+    kubectl get pods -o wide
