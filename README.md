@@ -21,3 +21,7 @@
   _Pod ichidagi contenir logini ko'rish_
 
      kubectl logs -c [contenir_name]
+
+**K8s dagi resurs konfigini yaml faylga yo'naltirish**
+
+     kubectl run [pod_name] --image nginx --dry-run=client -o yaml > nginx-pod.yaml
