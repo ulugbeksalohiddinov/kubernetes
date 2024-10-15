@@ -2,15 +2,15 @@
     
     crictl ps
 
-**POD qaysi NODEda turganini ko'rish**
+**Pod qaysi Nodeda turganini ko'rish**
 
     kubectl get pods -o wide
 
-**POD qaysi Workerda turganini ko'rish**
+**Pod qaysi Workerda turganini ko'rish**
 
     kubectl get pods -n kube-system -o wide    
 
-**NODE haqida to'liq ko'rish**
+**Node haqida to'liq ko'rish**
 
     kubectl get nodes -o wide
 
