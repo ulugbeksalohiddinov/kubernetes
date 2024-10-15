@@ -25,3 +25,7 @@
 **K8s dagi resurs konfigini yaml faylga yo'naltirish**
 
      kubectl run [pod_name] --image nginx --dry-run=client -o yaml > nginx-pod.yaml
+
+**Show API date**
+
+      kubectl api-resources
