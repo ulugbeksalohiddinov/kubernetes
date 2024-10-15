@@ -13,3 +13,7 @@
 **NODE haqida to'liq ko'rish**
 
     kubectl get nodes -o wide
+
+**Show pod logs**
+
+     kubectl logs [Pod_name]
