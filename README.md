@@ -10,6 +10,8 @@
 
     kubectl get pods -n kube-system -o wide    
 
+    kubectl get pods -n [namespace_name] -o wide
+
 **Node haqida to'liq ko'rish**
 
     kubectl get nodes -o wide
