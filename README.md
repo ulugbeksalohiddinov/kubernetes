@@ -40,5 +40,5 @@
 
 **Create pod (K8Sda barcha resurslar create orqali ko'tariladi. Lekin pod run orqali ko'tariladi)**
    
-     kubectl run [pod_name] --image nginx
+     kubectl run [pod_name] --image nginx --port 80
 
