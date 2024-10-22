@@ -71,3 +71,7 @@
    _**Yaratilgan deployment.yaml faylni ishka tushuramiz**_
 
      kubectl create -f deployment.yaml
+
+**Show replica set**
+
+    kubectl get rs -n [namespace_name]
