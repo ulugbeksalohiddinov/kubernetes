@@ -83,3 +83,7 @@
 **Hamma NAMESPACElardagi podlarni ko'rish**
 
     kubectl get pods --all namespaces
+
+**K8S clusterdagi ishlamayaotgan podlarni ko'rish**
+
+    kubectl get pods --all-namespaces | grep -v "Running"
