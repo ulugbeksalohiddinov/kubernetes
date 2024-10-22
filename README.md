@@ -51,3 +51,7 @@
 **Show load pod in K8S (analog htop)**
 
     kubectl top pod -n [namespace_name] [pod_name]
+
+**Show describe pod**
+
+   kubectl describe pod [pod_name] -n [namespace_name]
