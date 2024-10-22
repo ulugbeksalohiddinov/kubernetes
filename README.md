@@ -63,3 +63,7 @@
 **Podni ichiga kirish**
 
     kubectl exec -it [pod_name] -n [namespace_name] -- sh
+
+**Create deployment**
+
+    kubectl create deploy [deployment_name] --image nvrbckdown/todo-list-app(docker hub image) --port 3000 --replicas 1 -n [namespace_name] --dry-run=client -o yaml > deployment.yaml
