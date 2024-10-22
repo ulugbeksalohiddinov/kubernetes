@@ -79,3 +79,7 @@
 **Show replica set**
 
     kubectl get rs -n [namespace_name]
+
+**Hamma NAMESPACElardagi podlarni ko'rish**
+
+    kubectl get pods --all namespaces
