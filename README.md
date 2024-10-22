@@ -44,3 +44,6 @@
    
      kubectl run [pod_name] --image nginx --port 80 -n [namespace_name]
 
+**Show load in K8S (analog htop)**
+
+   kubectl top nodes
