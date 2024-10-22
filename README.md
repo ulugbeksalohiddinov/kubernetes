@@ -59,3 +59,7 @@
 **Port-forwarding**
 
     kubectl port-forward pod/[pod_name] 8080:80 -n [namespace_name]
+
+**Podni ichiga kirish**
+
+    kubectl exec -it [pod_name] -n [namespace_name] -- sh
