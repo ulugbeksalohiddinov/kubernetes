@@ -54,4 +54,4 @@
 
 **Show describe pod**
 
-   kubectl describe pod [pod_name] -n [namespace_name]
+    kubectl describe pod [pod_name] -n [namespace_name]
