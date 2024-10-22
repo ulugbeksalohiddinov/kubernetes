@@ -32,4 +32,4 @@
 
 **Create namespace**
 
-     kubectl create ns student-ID
+     kubectl create ns [namespace_name]
