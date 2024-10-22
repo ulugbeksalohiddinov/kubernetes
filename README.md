@@ -29,3 +29,7 @@
 **Show API date**
 
       kubectl api-resources
+
+**Create namespace**
+
+     kubectl create ns student-ID
