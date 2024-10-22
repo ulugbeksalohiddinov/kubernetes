@@ -38,7 +38,7 @@
 
     kubectl get ns
 
-Create pod (K8Sda barcha resurslar create orqali ko'tariladi. Lekin pod run orqali ko'tariladi)
-
-   kubectl run [pod_name] --image nginx
+**Create pod (K8Sda barcha resurslar create orqali ko'tariladi. Lekin pod run orqali ko'tariladi)**
+   
+     kubectl run [pod_name] --image nginx
 
