@@ -6,7 +6,7 @@
 
     kubectl get pods -o wide
 
-**Pod qaysi Workerda turganini ko'rish**
+**Pod qaysi Workerda turganini ko'rish (kube-system namespaceida turgan podlarni ko'rilmoqda)**
 
     kubectl get pods -n kube-system -o wide    
 
