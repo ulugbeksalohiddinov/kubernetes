@@ -55,3 +55,7 @@
 **Show describe pod**
 
     kubectl describe pod [pod_name] -n [namespace_name]
+
+**Port-forwarding**
+
+    kubectl port-forward pod/[pod_name] 8080:80 -n [namespace_name]
