@@ -33,3 +33,7 @@
 **Create namespace**
 
      kubectl create ns [namespace_name]
+
+**Show All Namespaces**
+
+    kubectl get ns
