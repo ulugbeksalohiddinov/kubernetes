@@ -46,4 +46,4 @@
 
 **Show load in K8S (analog htop)**
 
-   kubectl top nodes
+    kubectl top nodes
