@@ -18,7 +18,7 @@
 
 **Show pod logs**
 
-     kubectl logs [Pod_name]
+     kubectl logs [Pod_name] -n [namespace_name]
 
   _Pod ichidagi contenir logini ko'rish_
 
