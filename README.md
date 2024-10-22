@@ -72,6 +72,10 @@
 
      kubectl create -f deployment.yaml
 
+  _**Agar deployment.yaml faylni ichini o'zgartirilsa. Misol uchun replicas: ni sonini oshirilsa applay qilip qayta ishka tushuriladi**_
+
+      kubectl apply -f deployment.yaml   
+
 **Show replica set**
 
     kubectl get rs -n [namespace_name]
