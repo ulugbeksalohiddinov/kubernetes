@@ -87,3 +87,7 @@
 **K8S clusterdagi ishlamayaotgan podlarni ko'rish**
 
     kubectl get pods --all-namespaces | grep -v "Running"
+
+**Deleate deployment**
+
+    kubectl deleate -f deployment.yaml  
