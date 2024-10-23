@@ -113,6 +113,6 @@
     LoadBalancer
     Headless
 
-**Serviceni _expose_ orqali yaratiladi. Yani biror yo'nalishga komunikatsiya ochib ber digani**
+**Serviceni _expose_ orqali yaratiladi. Yani biror yo'nalishga kommunikatsiya ochib ber digani**
 
     kubectl expose deployment [deployment_name] --port [service_port] --target-port [container_port] --dry-run=client -o yaml > service.yaml      
