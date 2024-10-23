@@ -98,4 +98,6 @@
 
     kubectl get ds
 
-    
+**Show iptables**
+
+    iptables -vL -t nat
