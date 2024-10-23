@@ -39,6 +39,7 @@
 **Show All Namespaces**
 
     kubectl get ns
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 **Create pod (K8Sda barcha resurslar create orqali ko'tariladi. Lekin pod run orqali ko'tariladi)**
    
