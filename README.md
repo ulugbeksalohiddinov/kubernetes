@@ -122,4 +122,7 @@
         kubectl create deploy nginx --image nginx --replicas 1 -n NAMESPACE
         kubectl expose deploy nginx --port 80 --target-port 80 -type ClusterIP -n NAMESPACE
 
+        kubectl create deploy nginx --image nginx --replicas 1 -n NAMESPACE --dry-run=client -o yaml > nginx.yaml
+        kubectl expose deploy nginx --port 80 --target-port 80 -type ClusterIP -n NAMESPACE --dry-run=client -o yaml > nginx.yaml
+
  
