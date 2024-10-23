@@ -101,3 +101,10 @@
 **Show iptables**
 
     iptables -vL -t nat
+
+**Service type**
+
+    ClusteIP
+    NodePort
+    LoadBalancer
+    Headless
