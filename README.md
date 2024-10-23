@@ -92,6 +92,10 @@
 **Deleate deployment**
 
     kubectl deleate -f deployment.yaml  
+
+**Show deployment**
+
+    kubectl get deploy
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 **Show daemonset**
