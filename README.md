@@ -146,3 +146,9 @@
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 **Ingress (doamin_address) --> service --> Pod**
+
+_ - Ingress yaratish uchun 1 deployment yaratish kerak 2 service yaratish kerak va ular asosida ingress yaratiladi_
+
+**Create Ingress**
+
+    kubectl create ingress [ingress_name] --rule "domain_name/=service_name:service_port"
