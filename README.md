@@ -157,8 +157,8 @@ _Bu yerda ingress ko'tarildi lekin uni klassi yo'q(nginx yo'q). U tushumaydi ngi
 
    _Buni to'g'irlash uchun_
    
-    kubectl edit ingress [ingress_name] 
-
+    **kubectl edit ingress [ingress_name]**
+    
         metadata:  dan keyin annotations qo'shiladi
 
             annotations:
