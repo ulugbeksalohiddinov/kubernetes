@@ -115,6 +115,8 @@
 
 **Serviceni _expose_ orqali yaratiladi. Yani biror yo'nalishga kommunikatsiya ochib ber digani**
 
+  **ClusteIP**
+  
     kubectl expose deployment [deployment_name] --port [service_port] --target-port [container_port] --dry-run=client -o yaml > service.yaml    
 
     **Example**
@@ -127,6 +129,17 @@
 
         kubectl apply yoki create -f nginx.yaml
 
+  **NodePort**
+
+    **Example**
+
+        kubectl create deploy nginx --image nginx --replicas 1 -n NAMESPACE
+        kubectl expose deploy nginx --port 80 --target-port 80 -type NodePort -n NAMESPACE
+
+        kubectl create deploy nginx --image nginx --replicas 1 -n NAMESPACE --dry-run=client -o yaml > nginx.yaml
+        kubectl expose deploy nginx --port 80 --target-port 80 -type NodePort -n NAMESPACE --dry-run=client -o yaml > nginx.yaml
+        
+     
  **Show Service**
 
      kubectl get svc
