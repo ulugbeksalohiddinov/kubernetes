@@ -162,9 +162,15 @@ _Bu yerda ingress ko'tarildi lekin uni klassi yo'q(nginx yo'q). U tushumaydi ngi
         - metadata:  dan keyin annotations qo'shiladi
 
             annotations:
-               kubernetes.io/ingress.class: nginx
+               kubernetes.io/ingress.class: nginx[controller_name]
 
-        - ma'lum bir vaqtdan keyin address qismida IP addres oladi ingressni ko'rganda       
+        - ma'lum bir vaqtdan keyin address qismida IP addres oladi. Bu IPni servicedagi ClusterIPdan olib keladi.   
+
+    Keyyin ingressga Domen qo'shamiz.
+
+        spec:
+          rules:
+          - host: domain_name   
                
 **Show ingress**
 
