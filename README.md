@@ -163,6 +163,8 @@ _Bu yerda ingress ko'tarildi lekin uni klassi yo'q(nginx yo'q). U tushumaydi ngi
 
             annotations:
                kubernetes.io/ingress.class: nginx
+
+        - ma'lum bir vaqtdan keyin address qismida IP addres oladi ingressni ko'rganda       
                
 **Show ingress**
 
