@@ -108,8 +108,8 @@
 
 **Service type**
 
-    ClusteIP
-    NodePort
+    ClusteIP - bu podlar o'rtasida ma'lumot almashuvchi service. Misol uchun 1 ta poddan 2 podni nomi bo'yicha zapros berish 
+    NodePort - bu podlarga nodeni IP sini portiga tashqaridan dostup ochadi 
     LoadBalancer
     Headless
 
