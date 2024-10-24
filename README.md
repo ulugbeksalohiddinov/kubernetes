@@ -153,12 +153,17 @@ _- Ingress yaratish uchun 1 deployment yaratish kerak 2 service yaratish kerak v
 
     kubectl create ingress [ingress_name] --rule "domain_name/=service_name:service_port"
 
-Bu yerda ingress ko'tarildi lekin uni klassi yo'q(nginx yo'q). U tushumaydi nginx controllerni ishlatishi kerakligini.
+_Bu yerda ingress ko'tarildi lekin uni klassi yo'q(nginx yo'q). U tushumaydi nginx controllerni ishlatishi kerakligini._
 
- Buni to'g'irlash uchun
-
+   _Buni to'g'irlash uchun_
+   
     kubectl edit ingress [ingress_name] 
 
+        metadata:  dan keyin annotations qo'shiladi
+
+            annotations:
+               kubernetes.io/ingress.class: nginx
+               
 **Show ingress**
 
     kubectl get ingress
