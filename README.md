@@ -175,7 +175,7 @@ _Bu yerda ingress ko'tarildi lekin uni klassi yo'q(nginx yo'q). U tushumaydi ngi
     Ingress config ichidagi pathType qismi bo'lib, uni 2 turi mavjud. Exact yoki Prefix     
 
     - Prefix qilib / qilinsa rootdan keyingi barcha linklar zaproslarga javob beradi
-    - Exact qilib /test qilinsa faqat /test ga javob beradi. Hatto testni orasiga nimadur qo'shilsa ha javob bermaydi
+    - Exact qilib /test qilinsa faqat /test ga javob beradi. Hatto testni orasiga nimadur qo'shilsa ham javob bermaydi
                
 **Show ingress**
 
