@@ -147,7 +147,7 @@
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 **Ingress (doamin_address) --> service --> Pod**
 
-_ - Ingress yaratish uchun 1 deployment yaratish kerak 2 service yaratish kerak va ular asosida ingress yaratiladi_
+_- Ingress yaratish uchun 1 deployment yaratish kerak 2 service yaratish kerak va ular asosida ingress yaratiladi_
 
 **Create Ingress**
 
