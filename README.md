@@ -166,7 +166,7 @@ _Bu yerda ingress ko'tarildi lekin uni klassi yo'q(nginx yo'q). U tushumaydi ngi
 
         - ma'lum bir vaqtdan keyin address qismida IP addres oladi. Bu IPni servicedagi ClusterIPdan olib keladi.   
 
-    Keyyin ingressga Domen qo'shamiz.
+    Keyin ingressga Domen qo'shamiz. kubectl edit ingress [ingress_name] orqali
 
         spec:
           rules:
