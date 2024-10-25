@@ -180,3 +180,7 @@ _Bu yerda ingress ko'tarildi lekin uni klassi yo'q(nginx yo'q). U tushumaydi ngi
 **Show ingress**
 
     kubectl get ingress
+
+**Show endpoints**
+
+    kubectl get endpoints
