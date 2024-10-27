@@ -215,3 +215,5 @@ _Bu yerda ingress ko'tarildi lekin uni klassi yo'q(nginx yo'q). U tushumaydi ngi
              configMapKeyRef:
                name: environment
                key: AUTHOR 
+
+  _Agar configmapdan envlarni o'zgartirsan. Podni deleate qilip keyin yana ko'tarish kerak._
