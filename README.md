@@ -255,7 +255,7 @@ _Bu yerda ingress ko'tarildi lekin uni klassi yo'q(nginx yo'q). U tushumaydi ngi
 
 **Resources and limits in K8S**
 
-_**Deployment resurs fayl yaratip olinadi va uni ichiga resurslar qo'sgiladi.**_
+_**Deployment resurs fayl yaratip olinadi va uni ichiga resurslar qo'sgiladi.Limits requestsdan kotta yoki teng bo'lishi kerak. Bo'lmasam xatolik beradi**_
 
     containers:
       resources:
