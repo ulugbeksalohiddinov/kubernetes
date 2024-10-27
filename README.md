@@ -201,3 +201,4 @@ _Bu yerda ingress ko'tarildi lekin uni klassi yo'q(nginx yo'q). U tushumaydi ngi
 
     kubectl create configmap environment --from-literal ENV=Develooment --from-literla AUTHOR=Ulugbek --dry-run=lient -o yaml > environment-configmap.yaml
 
+ _**Keyin yasab olingan configmap faylni deployment resursiga chaqirip olinadi**_
