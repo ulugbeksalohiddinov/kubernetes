@@ -240,7 +240,7 @@ _Bu yerda ingress ko'tarildi lekin uni klassi yo'q(nginx yo'q). U tushumaydi ngi
 **Yasalgan podni json faylidan envlarni tortish**
 
     - name: POD
-      valueFrom:
+      valueFrom: 
         fieldRef:
           fieldPath: metadate.name
 
@@ -250,3 +250,18 @@ _Bu yerda ingress ko'tarildi lekin uni klassi yo'q(nginx yo'q). U tushumaydi ngi
       valueFrom:
         fieldRef:
           fieldPath: spec.nodeName
+
+----------------------------------------------------------------------------------------------------------------------
+
+**Resources and limits in K8S**
+
+_**Deployment resurs fayl yaratip olinadi va uni ichiga resurslar qo'sgiladi.**_
+
+    containers:
+      resources:
+        requests:
+          memory: "64Mi"
+          cpu: "250m"
+        limits:
+          memory: "128Mi"
+          cpu: "500m"
