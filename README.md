@@ -228,7 +228,7 @@ _Bu yerda ingress ko'tarildi lekin uni klassi yo'q(nginx yo'q). U tushumaydi ngi
          env:
          - name: ENV
            valueFrom:
-             configMapKeyRef:
+             secretMapKeyRef:
                name: secret-env
                key: ENV
          - name: AUTHOR
