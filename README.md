@@ -216,7 +216,7 @@ _Bu yerda ingress ko'tarildi lekin uni klassi yo'q(nginx yo'q). U tushumaydi ngi
                name: environment
                key: AUTHOR 
 
-  _Agar configmapdan envlarni o'zgartirsan. Podni deleate qilip keyin yana ko'tarish kerak._
+   _Agar configmapdan envlarni o'zgartirsan. Podni deleate qilip keyin yana ko'tarish kerak._
 
 **Secret configmap yaratish. Envlarni shifirlangan ko'rinishda saqlaydi (base64 yordamida)**
 
