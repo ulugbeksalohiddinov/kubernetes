@@ -204,14 +204,14 @@ _Bu yerda ingress ko'tarildi lekin uni klassi yo'q(nginx yo'q). U tushumaydi ngi
  _**Keyin yasab olingan configmap faylni deployment resursiga chaqirip olinadi**_
 
        containers:
-        env:
-        - name: ENV
-          valueFrom:
-            configMapKeyRef:
-              name: environment
-              key: ENV
-        - name: AUTHOR
-          valueFrom:
-            configMapKeyRef:
-              name: environment
-              key: AUTHOR
+         env:
+         - name: ENV
+           valueFrom:
+             configMapKeyRef:
+               name: environment
+               key: ENV
+         - name: AUTHOR
+           valueFrom:
+             configMapKeyRef:
+               name: environment
+               key: AUTHOR 
