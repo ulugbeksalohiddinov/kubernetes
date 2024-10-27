@@ -236,3 +236,17 @@ _Bu yerda ingress ko'tarildi lekin uni klassi yo'q(nginx yo'q). U tushumaydi ngi
              secretKeyRef:
                name: secret-env
                key: AUTHOR 
+
+**Yasalgan podni json faylidan envlarni tortish**
+
+    - name: POD
+      valueFrom:
+        fieldRef:
+          fieldPath: metadate.name
+
+**Yasalgan nodeni json faylidan envlarni tortish**
+
+    - name: NODE
+      valueFrom:
+        fieldRef:
+          fieldPath: spec.nodeName
