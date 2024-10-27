@@ -184,3 +184,7 @@ _Bu yerda ingress ko'tarildi lekin uni klassi yo'q(nginx yo'q). U tushumaydi ngi
 **Show endpoints**
 
     kubectl get endpoints
+
+**Apply yaratolmaydi faqat bor narsani update qilip ishka tushiradi. Create yo'q narsani yaratadi va ishka tushiradi.**
+
+---------------------------------------------------------------------------------------------------------------------------------
