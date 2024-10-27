@@ -221,3 +221,18 @@ _Bu yerda ingress ko'tarildi lekin uni klassi yo'q(nginx yo'q). U tushumaydi ngi
 **Secret configmap yaratish. Envlarni shifirlangan ko'rinishda saqlaydi (base64 yordamida)**
 
     kubectl create secret secret-env --from-literal DB_HOST=127.0.0.1 --from-literla DB_PORT=5432 --dry-run=client -o yaml > secret-env.yaml
+
+ _**Keyin yasab olingan secretconfigmap faylni deployment resursiga chaqirip olinadi**_
+
+       containers:
+         env:
+         - name: ENV
+           valueFrom:
+             configMapKeyRef:
+               name: secret-env
+               key: ENV
+         - name: AUTHOR
+           valueFrom:
+             secretMapKeyRef:
+               name: secret-env
+               key: AUTHOR 
