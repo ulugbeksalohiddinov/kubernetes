@@ -199,7 +199,7 @@ _Bu yerda ingress ko'tarildi lekin uni klassi yo'q(nginx yo'q). U tushumaydi ngi
 
 **Configmap K8s. Bu usulda kubernetisni ichida configmap fayl yaratiladi va u deployment faylda chaqirib olinadi**
 
-    kubectl create configmap environment[ConfigMap_Nama] --from-literal ENV=Develooment --from-literla AUTHOR=Ulugbek --dry-run=lient -o yaml > environment-configmap.yaml
+    kubectl create configmap environment[ConfigMap_NAME] --from-literal ENV=Develooment --from-literla AUTHOR=Ulugbek --dry-run=lient -o yaml > environment-configmap.yaml
 
   _**Keyin yasab olingan configmap faylni deployment resursiga chaqirip olinadi**_
 
@@ -220,7 +220,7 @@ _Bu yerda ingress ko'tarildi lekin uni klassi yo'q(nginx yo'q). U tushumaydi ngi
 
 **Secret configmap yaratish. Envlarni shifirlangan ko'rinishda saqlaydi (base64 yordamida)**
 
-    kubectl create generic secret secret-env[Secret_Nama] --from-literal DB_HOST=127.0.0.1 --from-literla DB_PORT=5432 --dry-run=client -o yaml > secret-env.yaml
+    kubectl create generic secret secret-env[SECRET_NAME] --from-literal DB_HOST=127.0.0.1 --from-literla DB_PORT=5432 --dry-run=client -o yaml > secret-env.yaml
 
  _**Keyin yasab olingan secretconfigmap faylni deployment resursiga chaqirip olinadi**_
 
