@@ -201,7 +201,7 @@ _Bu yerda ingress ko'tarildi lekin uni klassi yo'q(nginx yo'q). U tushumaydi ngi
 
     kubectl create configmap environment --from-literal ENV=Develooment --from-literla AUTHOR=Ulugbek --dry-run=lient -o yaml > environment-configmap.yaml
 
- _**Keyin yasab olingan configmap faylni deployment resursiga chaqirip olinadi**_
+  _**Keyin yasab olingan configmap faylni deployment resursiga chaqirip olinadi**_
 
        containers:
          env:
@@ -218,6 +218,6 @@ _Bu yerda ingress ko'tarildi lekin uni klassi yo'q(nginx yo'q). U tushumaydi ngi
 
   _Agar configmapdan envlarni o'zgartirsan. Podni deleate qilip keyin yana ko'tarish kerak._
 
-**Secret configmap yaratish**
+**Secret configmap yaratish. Envlarni shifirlangan ko'rinishda saqlaydi (base64 yordamida)**
 
     kubectl create secret secret-env --from-literal DB_HOST=127.0.0.1 --from-literla DB_PORT=5432 --dry-run=client -o yaml > secret-env.yaml
