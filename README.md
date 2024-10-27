@@ -188,7 +188,7 @@ _Bu yerda ingress ko'tarildi lekin uni klassi yo'q(nginx yo'q). U tushumaydi ngi
 **Apply yaratolmaydi faqat bor narsani update qilip ishka tushiradi. Create yo'q narsani yaratadi va ishka tushiradi.**
 
 ---------------------------------------------------------------------------------------------------------------------------------
-**Deployment faylga .env qo'shish:**
+**Deployment faylga .env qo'shish Bu usul to'g'ridan to'g'ri deployment faylni ichiga envlarni qo'ship qo'yish:**
 
     containers:
         env:
@@ -196,3 +196,8 @@ _Bu yerda ingress ko'tarildi lekin uni klassi yo'q(nginx yo'q). U tushumaydi ngi
           value: "Development"
         - name: "AUTHOR"
           value: "Ulugbek"
+
+**Configmap K8s. Bu usulda kubernetisni ichida configmap fayl yaratiladi va u deployment faylda chaqirib olinadi**
+
+    kubectl create configmap environment --from-literal ENV=Develooment --from-literla AUTHOR=Ulugbek --dry-run=lient -o yaml > environment-configmap.yaml
+
