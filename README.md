@@ -188,3 +188,11 @@ _Bu yerda ingress ko'tarildi lekin uni klassi yo'q(nginx yo'q). U tushumaydi ngi
 **Apply yaratolmaydi faqat bor narsani update qilip ishka tushiradi. Create yo'q narsani yaratadi va ishka tushiradi.**
 
 ---------------------------------------------------------------------------------------------------------------------------------
+**Deployment faylga .env qo'shish:**
+
+    containers:
+        env:
+        - name: ENV
+          value: "Development"
+        - name: "AUTHOR"
+          value: "Ulugbek"
