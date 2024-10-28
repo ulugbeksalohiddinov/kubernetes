@@ -331,3 +331,5 @@ _Label ichida nechta key - valuelar bo'lsa hammasini deployment faylga qo'shilma
 
 **operator: Exists** - bu operatorda value berilmaydi. Keyni o'zini topsa bo'ldi
 
+**operator: DoesNotExists** - bu operatorda Deployment fayldagi ko'rsatilgan key bo'maganiga qo'yadi
+
