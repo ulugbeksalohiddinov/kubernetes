@@ -265,3 +265,13 @@ _**Deployment resurs fayl yaratip olinadi va uni ichiga resurslar qo'sgiladi.Lim
         limits:
           memory: "128Mi"
           cpu: "500m"
+
+----------------------------------------------------------------------------------------------------------------------------
+
+**Scheduling in K8S**
+
+_Schedulingga javob beruvchi asosiy komponent bu - kube-scheduler_
+
+
+
+
