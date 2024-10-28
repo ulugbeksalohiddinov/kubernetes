@@ -272,6 +272,22 @@ _**Deployment resurs fayl yaratip olinadi va uni ichiga resurslar qo'sgiladi.Lim
 
 _Schedulingga javob beruvchi asosiy komponent bu - kube-scheduler. U podlarni qaysi nodega o'rnatilishini hal qiladi_
 
+_**Scheduling qilishini bir necha usullari mavjud:**_
 
+**- nodeName - eng oddiy usuli, deployment faylga qaysi nodeda turishi yozib qo'yiladi**
 
+    spec:
+      nodeName: node1
 
+_**- nodeSelector - bu yerda labelar orqali nodelarga podlar o'rnatiladi. 1- label resurs yaratiladi va keyin u deployment faylga chaqiriladi. Label yaratilayotganda 1 ta nodega 1 nechta labelarni e'lon qilsa bo'ladi. Maqsad 1 ta nodega bir nechta podlarni qo'yish uchun.**_
+
+**Create label for node**
+
+    kubectl label node node3 familiya=salohiddinov ismi=ulugbek
+
+**Add label in deployment file**
+
+    spec:
+      nodeSelector:
+        familiya=salohiddinov
+        ismi=ulugbek
