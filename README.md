@@ -283,7 +283,7 @@ _**- nodeSelector - bu yerda labelar orqali nodelarga podlar o'rnatiladi. 1- lab
 
 **Create label for node**
 
-    kubectl label node node3 familiya=salohiddinov ismi=ulugbek
+    kubectl label node node3[node_name] familiya=salohiddinov ismi=ulugbek[key=value]
 
 **Add label in deployment file**
 
