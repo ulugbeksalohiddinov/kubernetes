@@ -292,7 +292,11 @@ _**- nodeSelector - bu yerda labelar orqali nodelarga podlar o'rnatiladi. 1- lab
         familiya: salohiddinov
         ismi: ulugbek
 
-_Label ichida nechta key - valuelar bo'lsa hammasini deployment faylga qo'shilmasa pod ko'tarilmaydi.( ? tekshirip ko'rish kerak)_
+_Label ichida nechta key - valuelar bo'lsa hammasini deployment faylga qo'shilmasa pod ko'tarilmaydi. Yani Hamma key valuelar bo'lishi kerak.( ? tekshirip ko'rish kerak)_
+
+**Create label for node**
+
+    kubectl label node node3 ulugbek=salohiddinov -n NAMESPACE
 
 **Add affinity in deployment file**
 
@@ -306,7 +310,8 @@ _Label ichida nechta key - valuelar bo'lsa hammasini deployment faylga qo'shilma
                 operator: In
                 values:
                 - salohiddinov
-                - nuriddin-o'g'li
+                
+                
           preferredDuringSchedulingIgnoredDuringExecution:
           - weight: 1
             preference:
@@ -315,3 +320,9 @@ _Label ichida nechta key - valuelar bo'lsa hammasini deployment faylga qo'shilma
                 operator: In
                 values:
                 - another-node-label-value
+
+**requiredDuringSchedulingIgnoredDuringExecution** - bu nodeSelectorga o'xshab labelar bor yoki yo'qligini tekshiradi. Bu holatda label bo'sagina qo'yadi. Bo'masa qo'ymidi Pandiningga tuship qoladi. Bu ishlap turgan podga nisbatan ishlamaydi. Faqat pod ko'tarilayotgan vaqtda ishlaydi.
+
+**preferredDuringSchedulingIgnoredDuringExecution** - bu agar labelarni topa olmasa o'zi resurslardan foydalangan holada boshqa nodelarga qo'yishi mumkun. Bu ham ishlap turgan podga nisbatan ishlamaydi. Faqat pod ko'tarilayotgan vaqtda ishlaydi.
+
+**operator: In** - bu deployment faylni keylariga 1 nechta valuelar yozilgan bo'lsa yo uni yo buni bo'lishi kerak degani. Hamma valuelar to'g'ri kelishi kerak deb majburlamaydi. 
