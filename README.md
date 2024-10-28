@@ -270,7 +270,7 @@ _**Deployment resurs fayl yaratip olinadi va uni ichiga resurslar qo'sgiladi.Lim
 
 **Scheduling in K8S**
 
-_Schedulingga javob beruvchi asosiy komponent bu - kube-scheduler_
+_Schedulingga javob beruvchi asosiy komponent bu - kube-scheduler. U podlarni qaysi nodega o'rnatilishini hal qiladi_
 
 
 
