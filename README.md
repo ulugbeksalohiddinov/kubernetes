@@ -329,3 +329,5 @@ _Label ichida nechta key - valuelar bo'lsa hammasini deployment faylga qo'shilma
 
 **operator: NotIn** -bu operatorda unisiyam bo'masligi kerak bunisi ham bo'lmasligi kerak. Deployment fayldagi hech qaysisi bo'lmasligi kerak
 
+**operator: Exists** - bu operatorda value berilmaydi. Keyni o'zini topsa bo'ldi
+
