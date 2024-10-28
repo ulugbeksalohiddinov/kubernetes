@@ -291,3 +291,5 @@ _**- nodeSelector - bu yerda labelar orqali nodelarga podlar o'rnatiladi. 1- lab
       nodeSelector:
         familiya=salohiddinov
         ismi=ulugbek
+
+    Label ichida nechta key - valuelar bo'lsa hammasini deployment faylga qo'shilmasa pod ko'tarilmaydi.( ? tekshirip ko'rish kerak)
