@@ -326,3 +326,6 @@ _Label ichida nechta key - valuelar bo'lsa hammasini deployment faylga qo'shilma
 **preferredDuringSchedulingIgnoredDuringExecution** - bu agar labelarni topa olmasa o'zi resurslardan foydalangan holada boshqa nodelarga qo'yishi mumkun. Bu ham ishlap turgan podga nisbatan ishlamaydi. Faqat pod ko'tarilayotgan vaqtda ishlaydi.
 
 **operator: In** - bu deployment faylni keylariga 1 nechta valuelar yozilgan bo'lsa yo uni yo buni bo'lishi kerak degani. Hamma valuelar to'g'ri kelishi kerak deb majburlamaydi. 
+
+**operator: NotIn** -bu operatorda unisiyam bo'masligi kerak bunisi ham bo'lmasligi kerak. Deployment fayldagi hech qaysisi bo'lmasligi kerak
+
