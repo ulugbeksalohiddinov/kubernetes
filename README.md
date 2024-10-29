@@ -338,6 +338,8 @@ _Label ichida nechta key - valuelar bo'lsa hammasini deployment faylga qo'shilma
 **operator: DoesNotExists** - bu operatorda Deployment fayldagi ko'rsatilgan key bo'maganiga qo'yadi
 
 
+**podAffinity**
+
     apiVersion: v1
     kind: Pod
     metadata:
@@ -366,10 +368,43 @@ _Label ichida nechta key - valuelar bo'lsa hammasini deployment faylga qo'shilma
               topologyKey: topology.kubernetes.io/zone
       containers:
       - name: with-pod-affinity
-        image: registry.k8s.io/pause:2.0
-      
+        image: registry.k8s.io/pause:2.0apiVersion: v1      
 
 **Pod qayerda turgan bo'lsa usha podga nisbatan ishlanadi.**
 
 - **podAffinit**: Bu yerda labellar mos kelsa pod shu pod turgan nodega tushishi mumkun.
 - **podAntiAffinity**: Bu yerda labellar mos kelsa pod shu pod turgan nodega tushmaydi.
+
+
+
+**nodeAffinity**
+
+    kind: Pod
+    metadata:
+      name: with-node-affinity
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: topology.kubernetes.io/zone
+                operator: In
+                values:
+                - antarctica-east1
+                - antarctica-west1
+          preferredDuringSchedulingIgnoredDuringExecution:
+          - weight: 1
+            preference:
+              matchExpressions:
+              - key: another-node-label-key
+                operator: In
+                values:
+                - another-node-label-value
+      containers:
+      - name: with-node-affinity
+        image: registry.k8s.io/pause:2.0
+
+Bu nodeSelectorga o'xshap ishlaydi. Faqat sintaksisi aniqroq. Key valuelari mos kelsa nodega qo'yadi operator: In bilan ishlatilsa.
+
+Agar operator: NotIn bilan ishlatilsa teskarisi bo'ladi
