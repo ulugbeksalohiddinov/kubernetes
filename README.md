@@ -405,6 +405,6 @@ _Label ichida nechta key - valuelar bo'lsa hammasini deployment faylga qo'shilma
       - name: with-node-affinity
         image: registry.k8s.io/pause:2.0
 
-Bu nodeSelectorga o'xshap ishlaydi. Faqat sintaksisi aniqroq. Key valuelari mos kelsa nodega qo'yadi operator: In bilan ishlatilsa.
+Bu nodeSelectorga o'xshap ishlaydi. Faqat sintaksisi aniqroq. Key va valuelari mos kelsa nodega qo'yadi operator: In bilan ishlatilsa.
 
 Agar operator: NotIn bilan ishlatilsa teskarisi bo'ladi
