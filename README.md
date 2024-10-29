@@ -42,11 +42,11 @@
 
 **Podni ichidan turip boshqa bir nodega ping berish**
 
-Misol uchun: busybox pod yaratvolamiz.
+- Misol uchun: busybox pod yaratvolamiz.
 
     kubectl run busybox --image busybox --command -- sleep 3600
 
-**Keyin ping beramiz**
+- Keyin ping beramiz
 
     kubectl busybox -- ping x.x.x.x[node_ip]
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
