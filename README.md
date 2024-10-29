@@ -39,6 +39,16 @@
 **Show All Namespaces**
 
     kubectl get ns
+
+**Podni ichidan turip boshqa bir nodega ping berish**
+
+Misol uchun: busybox pod yaratvolamiz.
+
+    kubectl run busybox --image busybox --command -- sleep 3600
+
+**Keyin ping beramiz**
+
+    kubectl busybox -- ping x.x.x.x[node_ip]
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 **Create pod (K8Sda barcha resurslar create orqali ko'tariladi. Lekin pod run orqali ko'tariladi)**
