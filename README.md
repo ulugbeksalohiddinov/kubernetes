@@ -338,7 +338,7 @@ _Label ichida nechta key - valuelar bo'lsa hammasini deployment faylga qo'shilma
 **operator: DoesNotExists** - bu operatorda Deployment fayldagi ko'rsatilgan key bo'maganiga qo'yadi
 
 
-**podAffinity**
+**-- podAffinity --**
 
     apiVersion: v1
     kind: Pod
@@ -377,7 +377,7 @@ _Label ichida nechta key - valuelar bo'lsa hammasini deployment faylga qo'shilma
 
 
 
-**nodeAffinity**
+**-- nodeAffinity --**
 
     kind: Pod
     metadata:
