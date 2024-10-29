@@ -285,6 +285,10 @@ _**- nodeSelector - bu yerda labelar orqali nodelarga podlar o'rnatiladi. 1- lab
 
     kubectl label node node3[node_name] familiya=salohiddinov ismi=ulugbek[key=value]
 
+**Show labels**
+
+    kubectl get nodes --show-labels
+
 **Add label in deployment file**
 
     spec:
@@ -296,7 +300,7 @@ _Label ichida nechta key - valuelar bo'lsa hammasini deployment faylga qo'shilma
 
 **Create label for node**
 
-    kubectl label node node3 ulugbek=salohiddinov -n NAMESPACE
+    kubectl label node node3 ulugbek=salohiddinov  -n NAMESPACE
 
 **Add affinity in deployment file**
 
