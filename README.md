@@ -337,3 +337,38 @@ _Label ichida nechta key - valuelar bo'lsa hammasini deployment faylga qo'shilma
 
 **operator: DoesNotExists** - bu operatorda Deployment fayldagi ko'rsatilgan key bo'maganiga qo'yadi
 
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: with-pod-affinity
+spec:
+  affinity:
+    podAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+      - labelSelector:
+          matchExpressions:
+          - key: security
+            operator: In
+            values:
+            - S1
+        topologyKey: topology.kubernetes.io/zone
+    podAntiAffinity:
+      preferredDuringSchedulingIgnoredDuringExecution:
+      - weight: 100
+        podAffinityTerm:
+          labelSelector:
+            matchExpressions:
+            - key: security
+              operator: In
+              values:
+              - S2
+          topologyKey: topology.kubernetes.io/zone
+  containers:
+  - name: with-pod-affinity
+    image: registry.k8s.io/pause:2.0
+
+**Pod qayerda turgan bo'lsa usha podga nisbatan ishlanadi.**
+
+- **podAffinit**: Bu yerda labellar mos kelsa pod shu pod turgan nodega tushishi mumkun.
+- **podAntiAffinity**: Bu yerda labellar mos kelsa pod shu pod turgan nodega tushmaydi.
