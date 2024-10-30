@@ -418,3 +418,15 @@ _Label ichida nechta key - valuelar bo'lsa hammasini deployment faylga qo'shilma
 Bu nodeSelectorga o'xshap ishlaydi. Faqat sintaksisi aniqroq. Key va valuelari mos kelsa nodega qo'yadi operator: In bilan ishlatilsa.
 
 Agar operator: NotIn bilan ishlatilsa teskarisi bo'ladi
+
+?
+
+?
+
+?
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+**Cronjob, Job**
+
+- Cronjob jobni yaratadi, job esa podni yaratadi
