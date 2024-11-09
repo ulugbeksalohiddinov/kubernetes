@@ -48,9 +48,7 @@
 
 - Misol uchun: busybox pod yaratvolamiz.
   
-
-    kubectl run busybox --image busybox --command -- sleep 3600
-
+**    kubectl run busybox --image busybox --command -- sleep 3600**
 
 - Keyin ping beramiz
 
