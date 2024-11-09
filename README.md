@@ -26,7 +26,7 @@
 
   _Pod ichidagi contenir logini ko'rish_
 
-     kubectl logs -c [contenir_name]
+         kubectl logs -c [contenir_name]
 
 **K8s dagi resurs konfigini yaml faylga yo'naltirish**
 
