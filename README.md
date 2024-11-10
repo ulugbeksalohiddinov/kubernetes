@@ -139,7 +139,7 @@
         kubectl expose deploy nginx --port 80 --target-port 80 -type ClusterIP -n NAMESPACE
 
         kubectl create deploy nginx --image nginx --replicas 1 -n NAMESPACE --dry-run=client -o yaml > nginx.yaml
-        kubectl expose deploy nginx --port 80 --target-port 80 -type ClusterIP -n NAMESPACE --dry-run=client -o yaml > nginx.yaml
+        kubectl expose deploy nginx --port 80 --target-port 80 --type ClusterIP -n NAMESPACE --dry-run=client -o yaml > nginx.yaml
 
         kubectl apply yoki create -f nginx.yaml
 
@@ -166,6 +166,11 @@ _- Ingress yaratish uchun 1 deployment yaratish kerak 2 service yaratish kerak v
 **Create Ingress**
 
     kubectl create ingress [ingress_name] --rule "domain_name/=service_name:service_port -n NAMESPACE --dry-run client -o yaml"
+
+EXAMPLE:
+
+    kubectl create ingress ingress_nginx --rule "kubs.uz/=nginx:80" -n aaa --dry-run=client -o yaml > nginx-ingress.yaml
+
 
 _Bu yerda ingress ko'tarildi lekin uni klassi yo'q(nginx yo'q). U tushumaydi nginx controllerni ishlatishi kerakligini._
 
