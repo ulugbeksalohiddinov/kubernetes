@@ -527,6 +527,7 @@ periodSeconds - kubelet har 5 soniyada trikiligini[liveness prod] tekshirish ker
       initialDelaySeconds: 5
       periodSeconds: 5
 
+
 **Deployment manifest fayl uchun liveness va readiness prob**
 
     containers:
@@ -540,4 +541,4 @@ periodSeconds - kubelet har 5 soniyada trikiligini[liveness prod] tekshirish ker
 	  tcpSocket:
 	    port: 5000
 	  initialDelaySeconds: 15
-	  periodSeconds: 10 
+	  periodSeconds: 10
