@@ -440,6 +440,28 @@ Agar operator: NotIn bilan ishlatilsa teskarisi bo'ladi
 
 - Cronjob jobni yaratadi, job esa podni yaratadi
 
+**Cronjob manifest file**
+
+    apiVersion: batch/v1
+    kind: CronJob
+    metadata:
+      name: hello
+    spec:
+      schedule: "*/1 * * * *"
+      jobTemplate:
+        spec:
+          template:
+            spec:
+              containers:
+              - name: hello
+                image: busybox:1.28
+                imagePullPolicy: IfNotPresent
+                command:
+                - /bin/sh
+                - -c
+                - date; echo Hello from the Kubernetes cluster
+              restartPolicy: OnFailure
+
 **Show cronjob**
 
     kubectl get cj(cronjob)
