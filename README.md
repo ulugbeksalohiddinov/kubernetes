@@ -443,3 +443,7 @@ Agar operator: NotIn bilan ishlatilsa teskarisi bo'ladi
 **Show cronjob**
 
     kubectl get cj(cronjob)
+
+**Show job**
+
+    kubectl get job
