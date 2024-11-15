@@ -490,34 +490,54 @@ registry.k8s.io/busybox image orqali konteynerni boshqaradigan Pod yaratatilishi
     metadata:
       labels:
         test: liveness
-      name: liveness-exec
+      name: liveness-http
     spec:
       containers:
       - name: liveness
-        image: registry.k8s.io/busybox
+        image: registry.k8s.io/e2e-test-images/agnhost:2.40
         args:
-        - /bin/sh
-        - -c
-        - touch /tmp/healthy; sleep 30; rm -f /tmp/healthy; sleep 600
+        - liveness
         livenessProbe:
-          exec:
-            command:
-            - cat
-            - /tmp/healthy
+          httpGet:
+            path: /healthz
+            port: 8080
+            httpHeaders:
+            - name: Custom-Header
+              value: Awesome
           initialDelaySeconds: 5
           periodSeconds: 5
 
-periodSeconds - kubelet har 5 soniyada trikiligini[liveness prod] tekshirish kerakligini bildiradi. initialDelaySeconds - kubletga tiriklikni tekshirishdan oldin 5 soniya kutish kerakligini etadi. Tiriklikni tekshiruvni amalga oshirish uchun kubelet konteynerga cat /tmp/healthy buyrug'i orqali zapros jo'natadi. 
-Agar buyruq muvaffaqiyatli bo'lsa, u 0 ni qaytaradi va kubelet konteynerni tirik va sog'lom deb hisoblaydi. Agar buyruq nolga teng bo'lmagan qiymatni qaytarsa, kubelet konteynerni o'ldiradi va uni qayta ishga tushiradi.
-
-Konteyner ishga tushganda, u quyidagi buyruqni bajaradi:
-
-    /bin/sh -c "touch /tmp/healthy; sleep 30; rm -f /tmp/healthy; sleep 600"
+periodSeconds - kubelet har 5 soniyada trikiligini[liveness prod] tekshirish kerakligini bildiradi. initialDelaySeconds - kubletga tiriklikni tekshirishdan oldin 5 soniya kutish kerakligini etadi. Tiriklikni tekshirish uchun kubelet konteynerda ishlayotgan va 8080-portda tinglayotgan serverga HTTP GET so‘rovini yuboradi. Agar so'rov berilganda serverni /healthz yo‘liga  muvaffaqiyatli kodni qaytarsa, kubelet konteynerni tirik va sog'lom deb hisoblaydi. Agar ishlov beruvchi xato kodini qaytarsa, kubelet konteynerni o'ldiradi va uni qayta ishga tushiradi. 200 dan katta yoki unga teng va 400 dan kam bo'lgan har qanday kod muvaffaqiyatni ko'rsatadi. Boshqa har qanday kod muvaffaqiyatsizlikni ko'rsatadi.
 
 **Show describe pod liveness-exec**
 
-    kubectl describe pod liveness-exec
+    kubectl describe pod liveness-http
 
 **Show pod liveness-exec**
 
-    kubectl get pod liveness-exec
+    kubectl get pod liveness-http
+
+**Readiness probes**
+
+    readinessProbe:
+      exec:
+        command:
+        - cat
+        - /tmp/healthy
+      initialDelaySeconds: 5
+      periodSeconds: 5
+
+**Deployment manifest fayl uchun liveness va readiness prob**
+
+    containers:
+	livenessProbe:
+	  httpGet:
+	    path: /env
+		port: 5000
+	  initialDelaySeconds: 10
+	  periodSeconds: 1
+	readinessProbe:
+	  tcpSocket:
+	    port: 5000
+	  initialDelaySeconds: 15
+	  periodSeconds: 10 
