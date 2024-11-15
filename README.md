@@ -473,3 +473,39 @@ Agar operator: NotIn bilan ishlatilsa teskarisi bo'ladi
 **Manifet fayl orqali cronjobni o'chirish**
 
     kubectl delete -f [cronjob-manifestfile-name.yaml]
+---------------------------------------------------------------------------------------------------------------------------------
+
+**Prob**
+
+_**-liveness probes**_ - bu containerni ko'tarilganini tekshiradi. Ishlavotimi yo'qmi.
+
+_**-readiness probes**_ - bu trafikni borip kela olishini tekshiradi. Zapros berilganda javob qaytvotimi yo'qmi shuni tekshiradi
+
+**Liveness probes**
+
+registry.k8s.io/busybox image orqali konteynerni boshqaradigan Pod yaratatilishiga misol:
+
+    apiVersion: v1
+    kind: Pod
+    metadata:
+      labels:
+        test: liveness
+      name: liveness-exec
+    spec:
+      containers:
+      - name: liveness
+        image: registry.k8s.io/busybox
+        args:
+        - /bin/sh
+        - -c
+        - touch /tmp/healthy; sleep 30; rm -f /tmp/healthy; sleep 600
+        livenessProbe:
+          exec:
+            command:
+            - cat
+            - /tmp/healthy
+          initialDelaySeconds: 5
+          periodSeconds: 5
+
+periodSeconds - kubelet har 5 soniyada trikiligini[liveness prod] tekshirish kerakligini bildiradi. initialDelaySeconds - kubletga tiriklikni tekshirishdan oldin 5 soniya kutish kerakligini etadi. Tiriklikni tekshiruvni amalga oshirish uchun kubelet konteynerga cat /tmp/healthy buyrug'i orqali zapros jo'natadi. 
+Agar buyruq muvaffaqiyatli bo'lsa, u 0 ni qaytaradi va kubelet konteynerni tirik va sog'lom deb hisoblaydi. Agar buyruq nolga teng bo'lmagan qiymatni qaytarsa, kubelet konteynerni o'ldiradi va uni qayta ishga tushiradi.
