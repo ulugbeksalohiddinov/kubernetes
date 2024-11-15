@@ -439,3 +439,7 @@ Agar operator: NotIn bilan ishlatilsa teskarisi bo'ladi
 **Cronjob, Job**
 
 - Cronjob jobni yaratadi, job esa podni yaratadi
+
+**Show cronjob**
+
+    kubectl get cj(cronjob)
