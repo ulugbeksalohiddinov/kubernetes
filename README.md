@@ -469,3 +469,7 @@ Agar operator: NotIn bilan ishlatilsa teskarisi bo'ladi
 **Show job**
 
     kubectl get job
+
+**Manifet fayl orqali cronjobni o'chirish**
+
+    kubectl delete -f [cronjob-manifestfile-name.yaml]
