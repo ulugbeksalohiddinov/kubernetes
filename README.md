@@ -545,3 +545,10 @@ periodSeconds - kubelet har 5 soniyada trikiligini[liveness prod] tekshirish ker
 	    initialDelaySeconds: 15
 	    periodSeconds: 10
     
+**RBAC**
+
+**Create service account**
+
+    kubectl create serviceaccount NAME-SA -n ulugbek 
+    yoki
+    kubectl create sa NAME-SA -n ulugbek 
