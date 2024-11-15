@@ -531,6 +531,8 @@ periodSeconds - kubelet har 5 soniyada trikiligini[liveness prod] tekshirish ker
 **Deployment manifest fayl uchun liveness va readiness prob**
 
     containers:
+      - image: nvrbckdown/flask-app
+        name: flask-app
 	livenessProbe:
 	  httpGet:
 	    path: /env
