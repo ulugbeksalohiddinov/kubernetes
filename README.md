@@ -509,3 +509,15 @@ registry.k8s.io/busybox image orqali konteynerni boshqaradigan Pod yaratatilishi
 
 periodSeconds - kubelet har 5 soniyada trikiligini[liveness prod] tekshirish kerakligini bildiradi. initialDelaySeconds - kubletga tiriklikni tekshirishdan oldin 5 soniya kutish kerakligini etadi. Tiriklikni tekshiruvni amalga oshirish uchun kubelet konteynerga cat /tmp/healthy buyrug'i orqali zapros jo'natadi. 
 Agar buyruq muvaffaqiyatli bo'lsa, u 0 ni qaytaradi va kubelet konteynerni tirik va sog'lom deb hisoblaydi. Agar buyruq nolga teng bo'lmagan qiymatni qaytarsa, kubelet konteynerni o'ldiradi va uni qayta ishga tushiradi.
+
+Konteyner ishga tushganda, u quyidagi buyruqni bajaradi:
+
+    /bin/sh -c "touch /tmp/healthy; sleep 30; rm -f /tmp/healthy; sleep 600"
+
+**Show describe pod liveness-exec**
+
+    kubectl describe pod liveness-exec
+
+**Show pod liveness-exec**
+
+    kubectl get pod liveness-exec
