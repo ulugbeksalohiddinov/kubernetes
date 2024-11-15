@@ -549,6 +549,10 @@ periodSeconds - kubelet har 5 soniyada trikiligini[liveness prod] tekshirish ker
 
 **Create service account**
 
-    kubectl create serviceaccount NAME-SA -n ulugbek 
+    kubectl create serviceaccount NAME-Serviceaccount -n ulugbek 
     yoki
-    kubectl create sa NAME-SA -n ulugbek 
+    kubectl create sa NAME-Serviceaccount -n ulugbek 
+
+**Show Serviceaccounts**
+
+    kubectl get sa -n ulugbek
