@@ -641,4 +641,10 @@ Example:
 
  	kubectl create clusterrolebinding [clusterrolebinding-NAME] --clusterrole=[clusterrole-NAME] --serviceaccount=[NAMESPACE]:[Serviceaccount-NAME] -n ulugbek --dry-run=client -o yaml > test-clusterrolebinding.yaml
 
+Example:
+
+	kubectl create clusterrolebinding devops --clusterrole=test-clusterrole --serviceaccount=ulugbek:test -n ulugbek --dry-run=client -o yaml > test-clusterrolebinding.yaml
+
+
+
   
