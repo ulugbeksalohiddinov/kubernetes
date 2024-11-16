@@ -568,3 +568,22 @@ Shu turlar asosida Binding yasaladi.
 **Role** 
 
 	kubectl create role test[name] --verb=get --verb=list --resource=pod[deploy, svc, ingress ...] -n ulugbek --dry-run=client -o yaml > test-role.yaml
+
+ 	
+  	apiVersion: rbac.authorization.k8s.io/v1
+	kind: Role
+	metadata:
+  	  creationTimestamp: null
+  	  name: test
+  	  namespace: aaa
+  	rules:
+	- apiGroups:
+  	  - ""
+  	  resources:
+  	  - pods
+  	  verbs:
+  	  - get
+          - list
+
+
+
