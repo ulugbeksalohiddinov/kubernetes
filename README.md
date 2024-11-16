@@ -565,7 +565,7 @@ _**- Clusterrole**_ - bu umumiy cluster darajasida qandaydur accesslar berish
 
 Shu turlar asosida Binding yasaladi.
 
-**Role** 
+**Create Role** 
 
 	kubectl create role test[name] --verb=get --verb=list --resource=pod[deploy, svc, ingress ...] -n ulugbek --dry-run=client -o yaml > test-role.yaml
 
@@ -585,5 +585,11 @@ Shu turlar asosida Binding yasaladi.
   	  - get
           - list
 
+**Show role**
+
+	kubectl get role -n ulugbek
 
 
+**Create RoleBinding**
+
+	kubectl create rolebinding [rolebinding-NAME] --role=[role-NAME] --serviceaccount=[NAMESPACE]:[Serviceaccount-NAME] -n ulugbek --dry-run=client -o yaml > test-rolebinding.yaml
