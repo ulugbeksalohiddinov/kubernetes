@@ -544,6 +544,7 @@ periodSeconds - kubelet har 5 soniyada trikiligini[liveness prod] tekshirish ker
 	      port: 5000
 	    initialDelaySeconds: 15
 	    periodSeconds: 10
+-------------------------------------------------------------------------------------------------------------------------------
     
 **RBAC**
 
@@ -567,8 +568,9 @@ Shu turlar asosida Binding yasaladi.
 
 **Create Role** 
 
-	kubectl create role test-role[name] --verb=get --verb=list --resource=pod[deploy, svc, ingress ...] -n ulugbek --dry-run=client -o yaml > test-role.yaml
+	kubectl create role test-role[name] --verb=get --verb=list --resource=pod -n ulugbek --dry-run=client -o yaml > test-role.yaml
 
+verb= "get", "list", "watch", "create", "update", "patch", "delete"
  	
   	apiVersion: rbac.authorization.k8s.io/v1
 	kind: Role
@@ -601,3 +603,34 @@ Example:
 **Show rolebinding**
 
 	kubectl get rolebinding -n ulugbek
+
+ **Create ClusterRole**
+
+	kubectl create clusterrole test-clusterrole --verb=get --verb=list --resource=secrets -n ulugbek --dry-run=client -o yaml > test-clusterrole.yaml
+
+   	apiVersion: rbac.authorization.k8s.io/v1
+	kind: ClusterRole
+	metadata:
+  	  creationTimestamp: null
+  	  name: test-clusterrole
+	rules:
+	- apiGroups:
+  	  - ""
+          resources:
+  	  - secrets
+  	  verbs:
+  	  - get
+  	  - list
+
+Agar clusterdagi barcha resourcelarga to'liq access bermoqchi bo'linsa
+
+	apiVersion: rbac.authorization.k8s.io/v1
+	kind: ClusterRole
+	metadata:
+  	  creationTimestamp: null
+  	  name: test-clusterrole
+	rules:
+	- apiGroups: ["*"] # barcha api-resourcelarga
+          resources: ["*"] # barcha resurslarga
+  	  verbs: ["*"] # barcha narsa qilishga "get", "list", "watch", "create", "update", "patch", "delete"
+
