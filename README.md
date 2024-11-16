@@ -645,6 +645,6 @@ Example:
 
 	kubectl create clusterrolebinding devops --clusterrole=test-clusterrole --serviceaccount=ulugbek:test -n ulugbek --dry-run=client -o yaml > test-clusterrolebinding.yaml
 
+**Show Clusterrolebinding**
 
-
-  
+	kubectl get clusterrolebinding -n ulugbek
