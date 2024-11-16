@@ -563,6 +563,8 @@ _**- role**_ -  bu pod darajasida qandaydur accesslar berish
 
 _**- Clusterrole**_ - bu umumiy cluster darajasida qandaydur accesslar berish
 
-Shu turlar asosida Banding yasaladi.
+Shu turlar asosida Binding yasaladi.
 
 **Role** 
+
+	kubectl create role test[name] --verb=get --verb=list --resource=pod[deploy, svc, ingress ...] -n ulugbek --dry-run=client -o yaml > test-role.yaml
