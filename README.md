@@ -556,3 +556,12 @@ periodSeconds - kubelet har 5 soniyada trikiligini[liveness prod] tekshirish ker
 **Show Serviceaccounts**
 
     kubectl get sa -n ulugbek
+
+**RBACni 2 ta turi mavjud:**
+
+_**- role**_ -  bu pod darajasida qandaydur accesslar berish
+_**- Clusterrole**_ - bu umumiy cluster darajasida qandaydur accesslar berish
+
+Shu turlar asosida Banding yasaladi.
+
+**Role** 
