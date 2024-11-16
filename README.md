@@ -631,6 +631,6 @@ Agar clusterdagi barcha resourcelarga to'liq access bermoqchi bo'linsa
   	  name: test-clusterrole
 	rules:
 	- apiGroups: ["*"] # barcha api-resourcelarga
-resources: ["*"] # barcha resurslarga
+          resources: ["*"] # barcha resurslarga
   	  verbs: ["*"] # barcha narsa qilishga "get", "list", "watch", "create", "update", "patch", "delete"
 
