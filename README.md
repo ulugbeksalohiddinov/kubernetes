@@ -567,14 +567,14 @@ Shu turlar asosida Binding yasaladi.
 
 **Create Role** 
 
-	kubectl create role test[name] --verb=get --verb=list --resource=pod[deploy, svc, ingress ...] -n ulugbek --dry-run=client -o yaml > test-role.yaml
+	kubectl create role test-role[name] --verb=get --verb=list --resource=pod[deploy, svc, ingress ...] -n ulugbek --dry-run=client -o yaml > test-role.yaml
 
  	
   	apiVersion: rbac.authorization.k8s.io/v1
 	kind: Role
 	metadata:
   	  creationTimestamp: null
-  	  name: test
+  	  name: test-role
   	  namespace: aaa
   	rules:
 	- apiGroups:
@@ -593,3 +593,11 @@ Shu turlar asosida Binding yasaladi.
 **Create RoleBinding**
 
 	kubectl create rolebinding [rolebinding-NAME] --role=[role-NAME] --serviceaccount=[NAMESPACE]:[Serviceaccount-NAME] -n ulugbek --dry-run=client -o yaml > test-rolebinding.yaml
+
+Example:
+
+ 	kubectl create rolebinding developer --role=test-role --serviceaccount=ulugbek:test -n ulugbek --dry-run=client -o yaml > test-rolebinding.yaml
+
+**Show rolebinding**
+
+	kubectl get rolebinding -n ulugbek
