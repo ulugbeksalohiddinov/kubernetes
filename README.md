@@ -577,7 +577,7 @@ verb= "get", "list", "watch", "create", "update", "patch", "delete"
 	metadata:
   	  creationTimestamp: null
   	  name: test-role
-  	  namespace: aaa
+  	  namespace: ulugbek
   	rules:
 	- apiGroups:
   	  - "" #bu api v1 ga teng bo'sh maydon
@@ -613,6 +613,7 @@ Example:
 	metadata:
   	  creationTimestamp: null
   	  name: test-clusterrole
+     	  namespace: ulugbek
 	rules:
 	- apiGroups:
   	  - ""
@@ -622,16 +623,22 @@ Example:
   	  - get
   	  - list
 
-Agar clusterdagi barcha resourcelarga to'liq access bermoqchi bo'linsa
+**Agar clusterdagi barcha resourcelarga to'liq access bermoqchi bo'linsa**
 
 	apiVersion: rbac.authorization.k8s.io/v1
 	kind: ClusterRole
 	metadata:
   	  creationTimestamp: null
   	  name: test-clusterrole
+     	  namespace: ulugbek
 	rules:
 	- apiGroups: ["*"] # barcha api-resourcelarga
   	  resources: ["*"] # barcha resurslarga
   	  verbs: ["*"] # barcha narsa qilishga "get", "list", "watch", "create", "update", "patch", "delete"
 	
 
+**Create ClusterRoleBinding**
+
+ 	kubectl create clusterrolebinding [clusterrolebinding-NAME] --clusterrole=[clusterrole-NAME] --serviceaccount=[NAMESPACE]:[Serviceaccount-NAME] -n ulugbek --dry-run=client -o yaml > test-clusterrolebinding.yaml
+
+  
