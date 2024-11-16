@@ -578,7 +578,7 @@ Shu turlar asosida Binding yasaladi.
   	  namespace: aaa
   	rules:
 	- apiGroups:
-  	  - ""
+  	  - "" #bu api v1 ga teng bo'sh maydon
   	  resources:
   	  - pods
   	  verbs:
