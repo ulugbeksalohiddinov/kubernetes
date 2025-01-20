@@ -75,6 +75,10 @@
 
     kubectl port-forward pod/[pod_name] 8080:80 -n [namespace_name]
 
+ **Stop port-forwarding**
+
+    pkill -f "kubectl port-forward [pod_name] 8080:80"  
+
 **Podni ichiga kirish**
 
     kubectl exec -it [pod_name] -n [namespace_name] -- sh
