@@ -122,6 +122,11 @@
 **To see the Deployment rollout status**
 
     kubectl rollout status deployment/nginx-deployment
+
+**Deploymentni ichidagi podning imageni yangilash**
+
+    kubectl set image  deployments/nginx-deployment nginx=nginx:1.9.1
+
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 **Show daemonset**
