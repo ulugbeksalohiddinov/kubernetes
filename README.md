@@ -110,6 +110,10 @@
 **Show deployment**
 
     kubectl get deploy
+
+**To see the Deployment rollout status**
+
+    kubectl rollout status deployment/nginx-deployment
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 **Show daemonset**
