@@ -127,6 +127,18 @@
 
     kubectl set image  deployments/nginx-deployment nginx=nginx:1.9.1
 
+**Deploymentni ichidagi podlar konfiguratsiyasida qandaydur o'zgarish bo'lsa va _o'zgarishni avvalgi holatiga qaytarish_**
+
+    kubectl rollout undo deployments/nginx-deployment
+    
+       _out: deployment.extensions/nginx-deployment rolled back_
+
+**Deploymentni statusini tekshirish**
+
+    kubectl rollout status deployments/nginx-deployment 
+
+	_deployment "nginx-deployment" successfully rolled out_
+ 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 **Show daemonset**
