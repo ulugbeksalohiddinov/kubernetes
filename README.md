@@ -131,13 +131,13 @@
 
     kubectl rollout undo deployments/nginx-deployment
     
-       _out: deployment.extensions/nginx-deployment rolled back_
+       - out: deployment.extensions/nginx-deployment rolled back
 
 **Deploymentni statusini tekshirish**
 
     kubectl rollout status deployments/nginx-deployment 
 
-	_deployment "nginx-deployment" successfully rolled out_
+	- out: deployment "nginx-deployment" successfully rolled out
  
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
