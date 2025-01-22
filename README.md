@@ -138,7 +138,11 @@
     kubectl rollout status deployments/nginx-deployment 
 
 	- out: deployment "nginx-deployment" successfully rolled out
- 
+
+ **Namespacega tegishli Deploymentlarga restart berish**
+
+	kubectl rollout restart deployment --namespace=<your-namespace>
+ 	
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 **Show daemonset**
