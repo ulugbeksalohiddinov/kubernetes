@@ -690,3 +690,28 @@ Example:
 Secret yaratiladi:
 
 		kubectl create secret docker-registry harbor-secret --docker-server=harbor.mm.uz --docker-username='robot$cicd' --docker-password='yshu3bgGhuVD0147D7KIVD0K0OlDVScq' --namespace=prod
+
+Deploymentga secretni bog'lash va imageni ko'rsatish
+
+		apiVersion: apps/v1
+		kind: Deployment
+		metadata:
+  		  labels:
+            app: dep-nginx
+  		  name: dep-nginx
+          namespace: prod
+  		spec:
+  		  replicas: 1
+  		  selector:
+    		matchLabels:
+      		  app: dep-nginx
+  		  template:
+    		metadata:
+              labels:
+        		app: dep-nginx
+    		spec:
+      		  imagePullSecrets:
+        		- name: harbor-secret
+      		  containers:
+        		- name: frontend
+          		  image: harbor.mkb.uz/java-images/node/front:latest
