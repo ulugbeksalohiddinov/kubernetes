@@ -689,7 +689,7 @@ Example:
 
 Secret yaratiladi:
 
-		kubectl create secret docker-registry harbor-secret --docker-server=harbor.mm.uz --docker-username='robot$cicd' --docker-password='yshu3bgGhuVD0147D7KIVD0K0OlDVScq' --namespace=prod
+		kubectl create secret docker-registry harbor-secret --docker-server=harbor.mm.uz --docker-username='robot$cicd' --docker-password='52frgrbgGhuVD0147D7KIVD0K0OlDVScq' --namespace=prod
 
 Deploymentga secretni bog'lash va imageni ko'rsatish
 
@@ -714,4 +714,4 @@ Deploymentga secretni bog'lash va imageni ko'rsatish
         		- name: harbor-secret
       		  containers:
         		- name: frontend
-          		  image: harbor.mkb.uz/java-images/node/front:latest
+          		  image: harbor.mm.uz/java-images/node/front:latest
