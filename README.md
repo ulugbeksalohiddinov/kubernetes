@@ -681,3 +681,12 @@ Example:
 **Show Clusterrolebinding**
 
 	kubectl get clusterrolebinding -n ulugbek
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+**K8S clusterni private Harbordan imageni tortish**
+
+Secret yaratiladi:
+
+		kubectl create secret docker-registry harbor-secret --docker-server=harbor.mm.uz --docker-username='robot$cicd' --docker-password='yshu3bgGhuVD0147D7KIVD0K0OlDVScq' --namespace=prod
